@@ -13,8 +13,10 @@ jobs:
          uses: actions/setup-node@v2
          with:
           node-version: '12'
-       - name: Install dependency packages
+       - name: Install dependency packages for Server
          run: npm --prefix ./Server install
+       - name: Install dependency packages for Test
+         run: npm --prefix ./Test install
        - name: Run server
          run: (npm --prefix ./Server start&)
        - name: Run test
