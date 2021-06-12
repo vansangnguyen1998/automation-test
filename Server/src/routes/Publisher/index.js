@@ -38,7 +38,7 @@ export default [
   },
   {
     method    : 'GET',
-    path      : `/${path}/:_id`,
+    path      : `/${path}/getOne`,
     controller: controller.getOne,
     validation: validation.getOne,
     authOpts  : {
@@ -49,7 +49,7 @@ export default [
   },
   {
     method    : 'PUT',
-    path      : `/${path}/getOne`,
+    path      : `/${path}/:_id`,
     controller: controller.update,
     validation: validation.update,
     authOpts  : {

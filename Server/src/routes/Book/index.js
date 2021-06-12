@@ -56,6 +56,6 @@ export default [
       mode: 'optional'
     },
 
-    tags: ['books']
+    tags: [path]
   }
 ]
