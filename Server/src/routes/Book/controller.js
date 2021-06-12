@@ -56,7 +56,7 @@ const create = async (req, res, next) => {
     const [book] = await Book.create([infos], { session })
     await session.commitTransaction()
 
-    res.json(book.toJSON())
+    res.status(201).json(book.toJSON())
   } catch (error) {
     await session.abortTransaction()
     next(error)

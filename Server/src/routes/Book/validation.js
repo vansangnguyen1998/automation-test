@@ -33,7 +33,7 @@ const deleteData = {
 
 const create = {
   body: Joi.object({
-    _id         : JoiCustom.objectId(),
+    // _id         : JoiCustom.objectId(),
     code        : Joi.string(),
     title       : Joi.string(),
     name        : Joi.string(),

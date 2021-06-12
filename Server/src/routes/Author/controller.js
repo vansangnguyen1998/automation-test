@@ -34,7 +34,6 @@ const getMany = async (req, res, next) => {
       sort: '-createdAt',
       lean: true
     })
-
     return res.json(pagination)
   } catch (error) {
     return next(error)
@@ -55,7 +54,7 @@ const create = async (req, res, next) => {
     const [author] = await Author.create([infos], { session })
     await session.commitTransaction()
 
-    res.json(author.toJSON())
+    res.status(201).json(author.toJSON())
   } catch (error) {
     await session.abortTransaction()
     next(error)
