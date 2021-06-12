@@ -34,6 +34,12 @@ jobs:
           file: ./Server/Dockerfile
           tags: gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
           push: true
+       - name: Login to gcloud
+         uses: google-github-actions/setup-gcloud@master
+         with:
+          project_id: 'dotted-signer-316607'
+          service_account_key: ${{ secrets.GCR_JSON_KEY }}
+          export_default_credentials: true
        - name: Connect to k8s cluster
          run: |
           gcloud container clusters get-credentials cluster-1 --zone asia-southeast1-b --project dotted-signer-316607
