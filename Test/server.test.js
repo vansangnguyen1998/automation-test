@@ -4,7 +4,7 @@
  * Created Date: Saturday, June 12th 2021, 4:52:36 pm
  * Author: Vĩnh Phát
  * -----
- * Last Modified: Saturday, June 12th 2021, 7:06:38 pm
+ * Last Modified: Saturday, June 12th 2021, 7:51:48 pm
  * Modified By: Văn Sang
  * ------------------------------------
  */
@@ -38,17 +38,17 @@ test('GET /books', async () => {
   expect(response.data.limit).toEqual(limit)
 })
 
-test('GET not found', async () => {
-  const page = 2
-  const limit = 10
+// test('GET not found', async () => {
+//   const page = 2
+//   const limit = 10
   
-  const response = await axios.get(`${api}/books-notfound`, { params: { page, limit }})
+//   const response = await axios.get(`${api}/books-notfound`, { params: { page, limit }})
 
-  expect(response.status).toEqual(200)
+//   expect(response.status).toEqual(200)
   
-  expect(response.data.page).toEqual(page)
-  expect(response.data.limit).toEqual(limit)
-})
+//   expect(response.data.page).toEqual(page)
+//   expect(response.data.limit).toEqual(limit)
+// })
 
 test('GET /publishers', async () => {
   const page = 2
