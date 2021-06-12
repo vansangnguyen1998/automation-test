@@ -43,3 +43,11 @@ jobs:
        - name: Connect to k8s cluster
          run: |
           gcloud container clusters get-credentials cluster-1 --zone asia-southeast1-b --project dotted-signer-316607
+       - name: Deploy new version
+         env: 
+          NAMESPACE: default
+          KUBE_DEPLOYMENT: automation-test
+          KUBE_CONTAINER: automation-test-sha-256-1
+          DEPLOY_TARGET: gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
+         run: |
+          kubectl set image -n ${{ NAMESPACE }} deployment ${{ KUBE_DEPLOYMENT }} ${{ KUBE_CONTAINER }}=${{ DEPLOY_TARGET }}
