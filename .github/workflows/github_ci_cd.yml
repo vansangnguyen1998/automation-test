@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-test-deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout source
+         uses: actions/checkout@v2
+       - name: Install dependency packages
+          uses: actions/npm@master
+          with:
+           args: install
+       - name: Run test
+         uses: actions/npm@master
+         with:
+          args: run test
