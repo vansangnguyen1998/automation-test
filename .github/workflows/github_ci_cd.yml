@@ -33,7 +33,7 @@ jobs:
           context: .
           file: ./Server/Dockerfile
           tags: gcr.io/automation-test:latest
-          pushed: true
+          push: true
          
       #  - name: Run test
       #    uses: actions/npm@master
