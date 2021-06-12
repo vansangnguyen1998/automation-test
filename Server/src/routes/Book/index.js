@@ -38,7 +38,7 @@ export default [
   },
   {
     method    : 'GET',
-    path      : `/${path}/getOne`,
+    path      : `/${path}/:_id`,
     controller: controller.getOne,
     validation: validation.getOne,
     authOpts  : {
@@ -56,6 +56,6 @@ export default [
       mode: 'optional'
     },
 
-    tags: [path]
+    tags: ['books']
   }
 ]

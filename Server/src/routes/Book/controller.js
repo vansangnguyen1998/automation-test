@@ -14,7 +14,7 @@ import { APIError } from '@/utils/api-error'
 
 const getOne = async (req, res, next) => {
   try {
-    const book = await Book.findById(req.query._id).lean()
+    const book = await Book.findById(req.params._id).lean()
     if (!book) {
       throw new APIError('Book not found.', APIError.CODES.NOT_FOUND)
     }
