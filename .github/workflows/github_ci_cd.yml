@@ -10,10 +10,12 @@ jobs:
        - name: Checkout source
          uses: actions/checkout@v2
        - name: Install dependency packages
-         uses: actions/npm@master
+         uses: actions/setup-node@v2
          with:
-          args: install
-       - name: Run test
-         uses: actions/npm@master
-         with:
-          args: run test
+          node-version: '12'
+          path: './Server'
+         run: npm install
+      #  - name: Run test
+      #    uses: actions/npm@master
+      #    with:
+      #     args: run test
