@@ -32,7 +32,7 @@ jobs:
          with:
           context: .
           file: ./Server/Dockerfile
-          tags: gcr.io/automation-test:latest
+          tags: gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
           push: true
          
       #  - name: Run test
