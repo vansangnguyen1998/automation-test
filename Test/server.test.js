@@ -4,8 +4,8 @@
  * Created Date: Saturday, June 12th 2021, 4:52:36 pm
  * Author: Vĩnh Phát
  * -----
- * Last Modified: Saturday, June 12th 2021, 5:50:42 pm
- * Modified By: Vĩnh Phát
+ * Last Modified: Saturday, June 12th 2021, 6:29:25 pm
+ * Modified By: Văn Sang
  * ------------------------------------
  */
 
@@ -55,7 +55,7 @@ test('GET /authors/{_id}', async () => {
   const authorId = '60850257e867043fc035f03e'
   const response = await axios.get(`${api}/authors/${authorId}`)
 
-  expect(response.status).toEqual(200)
+  expect(response.status).toEqual(400)
   expect(response.data._id).toEqual(authorId)
   expect(response.data).toHaveProperty('email')
 })
