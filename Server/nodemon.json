@@ -1,0 +1,5 @@
+{
+  "delay": 5,
+  "env": { "NODE_ENV": "development" },
+  "ignore": ["resources/", "node_modules/"]
+}
