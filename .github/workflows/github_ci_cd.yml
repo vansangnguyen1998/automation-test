@@ -9,12 +9,12 @@ jobs:
      steps:
        - name: Checkout source
          uses: actions/checkout@v2
-       - name: Install dependency packages
+       - name: Setup node
          uses: actions/setup-node@v2
          with:
           node-version: '12'
-          path: './Server'
-         run: npm install
+       - name: Install dependency packages
+         run: npm --prefix ./Server install
       #  - name: Run test
       #    uses: actions/npm@master
       #    with:
