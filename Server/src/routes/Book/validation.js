@@ -21,7 +21,7 @@ const getMany = {
 }
 
 const getOne = {
-  params: Joi.object({
+  query: Joi.object({
     _id: JoiCustom.objectId().required()
   })
 }

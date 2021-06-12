@@ -38,7 +38,7 @@ export default [
   },
   {
     method    : 'GET',
-    path      : `/${path}/:_id`,
+    path      : `/${path}/getOne`,
     controller: controller.getOne,
     validation: validation.getOne,
     authOpts  : {

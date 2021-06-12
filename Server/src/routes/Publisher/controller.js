@@ -15,7 +15,7 @@ import { APIError } from '@/utils/api-error'
 
 const getOne = async (req, res, next) => {
   try {
-    const publisher = await Publisher.findById(req.params._id)
+    const publisher = await Publisher.findById(req.query._id)
       .lean()
 
     if (!publisher) {

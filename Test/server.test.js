@@ -4,7 +4,7 @@
  * Created Date: Saturday, June 12th 2021, 4:52:36 pm
  * Author: Vĩnh Phát
  * -----
- * Last Modified: Saturday, June 12th 2021, 6:29:25 pm
+ * Last Modified: Saturday, June 12th 2021, 6:44:54 pm
  * Modified By: Văn Sang
  * ------------------------------------
  */
@@ -51,18 +51,18 @@ test('GET /publishers', async () => {
   // expect(response.data.docs).toBeCalledWith(expect.any(Array))
 })
 
-test('GET /authors/{_id}', async () => {
+test('GET /authors/getOne', async () => {
   const authorId = '60850257e867043fc035f03e'
-  const response = await axios.get(`${api}/authors/${authorId}`)
+  const response = await axios.get(`${api}/authors/getOne?_id=${authorId}`)
 
   expect(response.status).toEqual(400)
   expect(response.data._id).toEqual(authorId)
   expect(response.data).toHaveProperty('email')
 })
 
-test('GET /books/{_id}', async () => {
+test('GET /books/getOne', async () => {
   const bookId = '60ba4a24b97eaa5ee8f1bcd7'
-  const response = await axios.get(`${api}/books/${bookId}`)
+  const response = await axios.get(`${api}/books/getOne?_id=${bookId}`)
 
   expect(response.status).toEqual(200)
   expect(response.data._id).toEqual(bookId)
@@ -70,9 +70,9 @@ test('GET /books/{_id}', async () => {
 })
 
 
-test('GET /publishers/{_id}', async () => {
+test('GET /publishers/getOne', async () => {
   const publisherId = '60b51d48bd81722678844224'
-  const response = await axios.get(`${api}/publishers/${publisherId}`)
+  const response = await axios.get(`${api}/publishers/getOne?_id=${publisherId}`)
 
   expect(response.status).toEqual(200)
   expect(response.data._id).toEqual(publisherId)

@@ -49,7 +49,7 @@ export default [
   },
   {
     method    : 'PUT',
-    path      : `/${path}/:_id`,
+    path      : `/${path}/getOne`,
     controller: controller.update,
     validation: validation.update,
     authOpts  : {
