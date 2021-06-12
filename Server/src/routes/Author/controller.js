@@ -34,7 +34,6 @@ const getMany = async (req, res, next) => {
       sort: '-createdAt',
       lean: true
     })
-
     return res.json(pagination)
   } catch (error) {
     return next(error)
