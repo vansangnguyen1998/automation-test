@@ -34,8 +34,6 @@ jobs:
           file: ./Server/Dockerfile
           tags: gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
           push: true
-         
-      #  - name: Run test
-      #    uses: actions/npm@master
-      #    with:
-      #     args: run test
+       - name: Connect to k8s cluster
+         run: |
+          gcloud container clusters get-credentials cluster-1 --zone asia-southeast1-b --project dotted-signer-316607
