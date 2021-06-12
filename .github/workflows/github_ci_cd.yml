@@ -50,4 +50,4 @@ jobs:
           KUBE_CONTAINER: automation-test-sha-256-1
           DEPLOY_TARGET: gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
          run: |
-          kubectl set image -n ${{ NAMESPACE }} deployment ${{ KUBE_DEPLOYMENT }} ${{ KUBE_CONTAINER }}=${{ DEPLOY_TARGET }}
+          kubectl set image -n $NAMESPACE deployment $KUBE_DEPLOYMENT $KUBE_CONTAINER=$DEPLOY_TARGET
