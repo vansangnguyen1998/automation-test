@@ -4,7 +4,7 @@
  * Created Date: Saturday, June 12th 2021, 4:52:36 pm
  * Author: Vĩnh Phát
  * -----
- * Last Modified: Saturday, June 12th 2021, 9:27:38 pm
+ * Last Modified: Saturday, June 12th 2021, 9:28:34 pm
  * Modified By: Vĩnh Phát
  * ------------------------------------
  */
@@ -147,19 +147,6 @@ test('GET /configs', async () => {
   const limit = 10
   
   const response = await axios.get(`${api}/configs`, { params: { page, limit }})
-
-  expect(response.status).toEqual(200)
-  
-  expect(response.data.page).toEqual(page)
-  expect(response.data.limit).toEqual(limit)
-})
-
-/* Rental */
-test('GET /rentals', async () => {
-  const page = 2
-  const limit = 10
-  
-  const response = await axios.get(`${api}/rentals`, { params: { page, limit }})
 
   expect(response.status).toEqual(200)
   
