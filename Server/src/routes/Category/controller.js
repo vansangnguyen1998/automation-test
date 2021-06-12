@@ -56,7 +56,7 @@ const create = async (req, res, next) => {
     await session.commitTransaction()
 
     const response = { ...category.toJSON() }
-    res.json(response)
+    res.status(201).json(response)
   } catch (error) {
     await session.abortTransaction()
     next(error)

@@ -9,7 +9,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "jest": "^26.0.1",
+        "axios": "^0.21.1",
+        "jest": "^27.0.4",
         "puppeteer": "git+https://github.com/GoogleChrome/puppeteer.git"
     }
 }
