@@ -35,7 +35,8 @@ jobs:
         #   tags: gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
         #   push: true
          run: |
-          docker build -t gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }} -f ./Server/Dockerfile .
+          cd ./Server
+          docker build -t gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
           docker push gcr.io/dotted-signer-316607/demo-ci-cd/automation-test:${{ github.sha }}
        - name: Login to gcloud
          uses: google-github-actions/setup-gcloud@master
