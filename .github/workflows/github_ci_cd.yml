@@ -32,7 +32,7 @@ jobs:
          with:
           context: .
           file: ./Server/Dockerfile
-          tags: gcr.io/automation-test:${{ steps.get_version.outputs.version }}
+          tags: gcr.io/automation-test:latest
           pushed: true
          
       #  - name: Run test
