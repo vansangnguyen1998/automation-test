@@ -6,6 +6,7 @@
  * -----
  * Last Modified: Saturday, June 12th 2021, 9:28:34 pm
  * Modified By: Vĩnh Phát
+
  * ------------------------------------
  */
 
@@ -55,12 +56,12 @@ test('GET /books', async () => {
   expect(response.data.limit).toEqual(limit)
 })
 
-/* Category */
 test('GET /categories', async () => {
   const page = 2
   const limit = 10
   
   const response = await axios.get(`${api}/books`, { params: { page, limit }})
+
 
   expect(response.status).toEqual(200)
   

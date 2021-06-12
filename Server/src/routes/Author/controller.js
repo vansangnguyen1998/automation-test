@@ -27,7 +27,6 @@ const getOne = async (req, res, next) => {
 const getMany = async (req, res, next) => {
   try {
     const { page, limit } = req.query
-
     const pagination = await Author.paginate({ deletedAt: { $exists: false } }, {
       page,
       limit,
