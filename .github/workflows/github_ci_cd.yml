@@ -22,9 +22,8 @@ jobs:
        - name: Run test
          id: test
          run: npm --prefix ./Test run test
-         continue-on-error: true
        - name: Push notification to Slack
-         if: steps.test.outcome != 'success'
+         if: always() && steps.test.outcome != 'success'
          uses: rtCamp/action-slack-notify@v2
          env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
