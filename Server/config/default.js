@@ -15,7 +15,7 @@ module.exports = {
   project: 'document-control-system',
 
   mongo: {
-    uri: 'mongodb+srv://admin:admin1243@cluster0.vob0i.mongodb.net/libary-management?retryWrites=true&w=majority'
+    uri: 'mongodb+srv://admin:admin1243@cluster0.vob0i.mongodb.net/invitationsDB?retryWrites=true&w=majority'
   },
   redis: {
     host          : 'redis-14435.c15.us-east-1-2.ec2.cloud.redislabs.com',

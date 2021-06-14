@@ -17,7 +17,7 @@ module.exports = {
     documentation: 'https://dcs-server.herokuapp.com/documentation'
   },
   mongo: {
-    uri: 'mongodb+srv://admin:admin1243@cluster0.fhgs9.mongodb.net/document-control-system?retryWrites=true&w=majority'
+    uri: 'mongodb+srv://admin:admin1243@cluster0.fhgs9.mongodb.net/invitationsDB?retryWrites=true&w=majority'
   },
   redis: {
     host          : 'redis-14435.c15.us-east-1-2.ec2.cloud.redislabs.com',
