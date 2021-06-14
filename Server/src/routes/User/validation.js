@@ -36,6 +36,7 @@ const create = {
     address : Joi.string().required(),
     birthday: Joi.date(),
     phone   : Joi.string(),
+    code    : Joi.string(),
     email   : Joi.string(),
     username: Joi.string(),
     password: Joi.string()
